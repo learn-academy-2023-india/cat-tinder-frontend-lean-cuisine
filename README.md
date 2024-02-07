@@ -1,4 +1,6 @@
-# Testing with Jest and React Testing Library
+# Cat Tinder Frontend!
+
+## Testing with Jest and React Testing Library 2/7/2024
 
 - Jest: JavaScript Testing Framework
 - React Testing Library: provides methods to write test scripts 
@@ -8,7 +10,7 @@
 - End-to-end: Automate the user going through the whole application
 
 
-# Setup
+### Setup
 - React testing library and Jest are already installed in your React app!
 - Run `yarn test`
 - Render: Allows me to call upon that component
@@ -18,11 +20,11 @@
 - All test files besides App.test.js should be placed in a folder within src named `__tests__`
 
 
-# Debugging
+### Debugging
 - screen.debug(): Shows the DOM nodes
 - screen.logTestingPlaygroundURL(): Provides a link to an interactive page that helps visualize your page and even help write tests
 
-# Process
+### Process
 - Arrange: What is needed to setup the environment that I am testing (render the component)
 - Act: Getting the method I need to pull this information (what I want to see)
 - Assert: Evaluate that what I want to see is actually rendering (expect statement with associated matchers)
