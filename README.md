@@ -22,3 +22,39 @@
 - screen.debug(): Shows the DOM nodes
 - screen.logTestingPlaygroundURL(): Provides a link to an interactive page that helps visualize your page and even help write tests
 
+# Process
+- Arrange: What is needed to setup the environment that I am testing (render the component)
+- Act: Getting the method I need to pull this information (what I want to see)
+- Assert: Evaluate that what I want to see is actually rendering (expect statement with associated matchers)
+
+
+**App.test.js**
+```javascript
+import { render, screen } from '@testing-library/react';
+import App from './App';
+import { BrowserRouter } from 'react-router-dom'
+import toastKitty from "./assets/cat-home.png"
+
+describe("<App />", () => {
+  it("renders an image", () => {
+    // Arrange:
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    )
+
+    // Debugging 
+    // screen.debug()
+    // screen.logTestingPlaygroundURL()
+
+    // Act:
+    const image = screen.getByRole('img', {
+      name: /toast kitty hard at work/i
+    })
+
+    // Assert:
+    expect(image).toHaveAttribute("src", toastKitty)
+  })
+})
+```
