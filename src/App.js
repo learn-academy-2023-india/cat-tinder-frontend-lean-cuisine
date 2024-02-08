@@ -13,13 +13,12 @@ import mockCats from "./mockCats.js"
 
 const App = () => {
   const [cats, setCats] = useState(mockCats)
-  console.log(cats)
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/catindex" element={<CatIndex />} />
+        <Route path="/catindex" element={<CatIndex cats={cats} />} />
         <Route path="/catshow" element={<CatShow />} />
         <Route path="/catnew" element={<CatNew />} />
         <Route path="/catedit" element={<CatEdit />} />
