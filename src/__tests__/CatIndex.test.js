@@ -10,7 +10,6 @@ describe("<CatIndex />", () => {
         <CatIndex cats={mockCats} />
       </BrowserRouter>
     )
-    screen.logTestingPlaygroundURL()
     mockCats.forEach((cat) => {
       const catName = screen.getByText(cat.name)
       expect(catName).toBeInTheDocument()

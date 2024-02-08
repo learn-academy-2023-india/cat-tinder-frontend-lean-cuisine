@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink as RouterNavLink } from "react-router-dom"
 
 const CatIndex = ({ cats }) => {
   return (
@@ -13,7 +14,9 @@ const CatIndex = ({ cats }) => {
                 alt="profile of all our cats friends"
                 className="cat-profile-pic"
               />
-              <p>{cat.name}</p>
+              <RouterNavLink to={`/catshow/${cat.id}`}>
+                <p>{cat.name}</p>
+              </RouterNavLink>
             </div>
           )
         })}
