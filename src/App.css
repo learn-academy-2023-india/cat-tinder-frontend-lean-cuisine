@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+.cat-profile-pic {
+  height: 12rem;
+}
+
+.cat-index-section {
+  display: flex;
+  justify-content: space-around;
+}
+
 .nav-link {
   color: #62815c !important;
 }
