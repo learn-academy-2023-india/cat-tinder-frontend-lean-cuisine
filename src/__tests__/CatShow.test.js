@@ -14,7 +14,11 @@ describe("<CatShow />", () => {
       </MemoryRouter>
     )
 
-    const catName = screen.getByText(mockCats[0].name)
+    const catName = screen.getByText(`Meet ${mockCats[0].name}`)
     expect(catName).toBeInTheDocument()
+    const catAge = screen.getByText(mockCats[0].age)
+    expect(catAge).toBeInTheDocument()
+    const catEnjoys = screen.getByText(mockCats[0].enjoys)
+    expect(catEnjoys).toBeInTheDocument()
   })
 })
