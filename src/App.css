@@ -5,7 +5,18 @@
   text-align: center;
 }
 
+footer {
+  bottom: 0;
+  color: #62815c;
+  font-size: 16pt;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+}
+
 .cat-profile-pic {
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   height: 12rem;
 }
 
@@ -14,31 +25,22 @@
   justify-content: space-around;
 }
 
-.nav-link {
-  color: #62815c !important;
-}
-
-.nav-link:hover {
-  font-weight: bold;
-}
-
 .logo {
   width: 13rem;
-}
-
-.nav {
-  justify-content: space-between;
 }
 
 .main-content-image {
   width: 45rem;
 }
 
-footer {
-  bottom: 0;
-  color: #62815c;
-  font-size: 16pt;
-  padding: 20px;
-  position: fixed;
-  width: 100%;
+.nav {
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: #62815c !important;
+}
+
+.nav-link:hover {
+  font-weight: bold;
 }
