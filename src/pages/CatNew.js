@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Form, FormGroup, Input, Button } from "reactstrap"
+import { Form, FormGroup, Input, Label, Button } from "reactstrap"
 import { useNavigate } from "react-router-dom"
 
 const CatNew = ({ createCat }) => {
@@ -22,40 +22,44 @@ const CatNew = ({ createCat }) => {
 
   return (
     <>
-      <h3>Add Your Cat Info to Make New Cat Friends</h3>
+      <h3>Add Your Cat and Start Making New Friends</h3>
       <Form>
         <FormGroup>
+          <Label htmlFor="name">Enter Your Cat's Name</Label>
           <Input
-            id="name"
+            data-testid="name"
             name="name"
-            placeholder="Enter Your Cat's Name"
+            placeholder="name"
             type="text"
             onChange={handleChange}
           />
         </FormGroup>
         <FormGroup>
+          <Label htmlFor="age">Enter Your Cat's Age</Label>
           <Input
-            id="age"
+            data-testid="age"
             name="age"
-            placeholder="Enter Your Cat's Age"
+            placeholder="age"
             type="number"
             onChange={handleChange}
           />
         </FormGroup>
         <FormGroup>
+          <Label htmlFor="enjoys">Enter What Your Cat Likes To Do</Label>
           <Input
-            id="enjoys"
+            data-testid="enjoys"
             name="enjoys"
-            placeholder="Enter What Your Cat Likes To Do"
+            placeholder="enjoys"
             type="textarea"
             onChange={handleChange}
           />
         </FormGroup>
         <FormGroup>
+          <Label htmlFor="url">Enter the URL of Your Cat's Image</Label>
           <Input
-            id="image"
+            data-testid="image"
             name="image"
-            placeholder="Enter the URL of Your Cat's Image"
+            placeholder="url"
             type="text"
             onChange={handleChange}
           />

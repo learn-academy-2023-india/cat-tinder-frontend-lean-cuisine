@@ -18,15 +18,30 @@ const App = () => {
     console.log(newCat)
   }
 
+  const updateCat = (cat, id) => {
+    console.log(cat)
+    console.log(id)
+  }
+
+  const deleteCat = (id) => {
+    console.log(id)
+  }
+
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catindex" element={<CatIndex cats={cats} />} />
-        <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
+        <Route
+          path="/catshow/:id"
+          element={<CatShow cats={cats} deleteCat={deleteCat} />}
+        />
         <Route path="/catnew" element={<CatNew createCat={createCat} />} />
-        <Route path="/catedit" element={<CatEdit />} />
+        <Route
+          path="/catedit/:id"
+          element={<CatEdit cats={cats} updateCat={updateCat} />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
