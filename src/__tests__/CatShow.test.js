@@ -5,9 +5,8 @@ import mockCats from "../mockCats.js"
 
 describe("<CatShow />", () => {
   it("renders one cat", () => {
-    const cat = "1"
     render(
-      <MemoryRouter initialEntries={[`/catshow/${cat}`]}>
+      <MemoryRouter initialEntries={["/catshow/1"]}>
         <Routes>
           <Route path="/catshow/:id" element={<CatShow cats={mockCats} />} />
         </Routes>
@@ -16,9 +15,9 @@ describe("<CatShow />", () => {
 
     const catName = screen.getByText(`Meet ${mockCats[0].name}`)
     expect(catName).toBeInTheDocument()
-    const catAge = screen.getByText(mockCats[0].age)
-    expect(catAge).toBeInTheDocument()
-    const catEnjoys = screen.getByText(mockCats[0].enjoys)
-    expect(catEnjoys).toBeInTheDocument()
+    const catInfo = screen.getByText(
+      "Mittens is 5 years old and enjoys sunshine and warm spots."
+    )
+    expect(catInfo).toBeInTheDocument()
   })
 })
