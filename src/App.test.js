@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom'
+import { render, screen } from "@testing-library/react"
+import App from "./App"
+import { BrowserRouter } from "react-router-dom"
 import toastKitty from "./assets/cat-home.png"
 
 describe("<App />", () => {
@@ -11,11 +11,11 @@ describe("<App />", () => {
         <App />
       </BrowserRouter>
     )
-    // Debugging 
+    // Debugging
     // screen.debug()
     // screen.logTestingPlaygroundURL()
     // Act
-    const image = screen.getByRole('img', {
+    const image = screen.getByRole("img", {
       name: /toast kitty hard at work/i
     })
     // Assert
@@ -29,8 +29,7 @@ describe("<App />", () => {
       </BrowserRouter>
     )
 
-    screen.logTestingPlaygroundURL()
-    const list = screen.getByRole('list')
+    const list = screen.getByRole("list")
     expect(list).toBeInTheDocument()
   })
 })

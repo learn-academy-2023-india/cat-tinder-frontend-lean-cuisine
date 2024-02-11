@@ -14,7 +14,7 @@ const CatIndex = ({ cats }) => {
                 alt="profile of all our cats friends"
                 className="cat-profile-pic"
               />
-              <RouterNavLink to={`/catshow/${cat.id}`}>
+              <RouterNavLink to={`/catshow/${cat.id}`} className="nav-link">
                 <p>{cat.name}</p>
               </RouterNavLink>
             </div>

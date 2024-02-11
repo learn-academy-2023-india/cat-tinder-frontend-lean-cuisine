@@ -14,10 +14,15 @@ footer {
   width: 100%;
 }
 
+form {
+  margin: 20px 50px;
+}
+
 .cat-profile-pic {
   border-radius: 10px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   height: 12rem;
+  margin: 10px;
 }
 
 .cat-index-section {
