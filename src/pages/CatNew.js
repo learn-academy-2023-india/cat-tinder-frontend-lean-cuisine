@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Form, FormGroup, Input, Label, Button } from "reactstrap"
-import { useNavigate } from "react-router-dom"
 
 const CatNew = ({ createCat }) => {
   const [catFormData, setCatFormData] = useState({
@@ -9,7 +8,6 @@ const CatNew = ({ createCat }) => {
     enjoys: "",
     image: ""
   })
-  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setCatFormData({ ...catFormData, [e.target.name]: e.target.value })
@@ -17,7 +15,6 @@ const CatNew = ({ createCat }) => {
 
   const handleSubmit = () => {
     createCat(catFormData)
-    navigate("/catindex")
   }
 
   return (

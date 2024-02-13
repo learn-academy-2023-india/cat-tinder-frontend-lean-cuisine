@@ -18,9 +18,9 @@ const CatShow = ({ cats, deleteCat }) => {
       <RouterNavLink to={`/catedit/${cat?.id}`} className="nav-link">
         <p>Edit {cat?.name}</p>
       </RouterNavLink>
-      <RouterNavLink to={"/catindex/"} className="nav-link">
-        <p onClick={() => deleteCat(cat.id)}>Delete {cat?.name}</p>
-      </RouterNavLink>
+      <p className="nav-link" onClick={() => deleteCat(cat.id)}>
+        Delete {cat?.name}
+      </p>
     </>
   )
 }

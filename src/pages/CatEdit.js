@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import { Form, FormGroup, Input, Label, Button } from "reactstrap"
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 const CatEdit = ({ cats, updateCat }) => {
   const { id } = useParams()
   const cat = cats.find((item) => item.id === +id)
-  const navigate = useNavigate()
 
   const [catFormData, setCatFormData] = useState({
     name: cat?.name,
@@ -16,7 +15,6 @@ const CatEdit = ({ cats, updateCat }) => {
 
   const handleSubmit = () => {
     updateCat(catFormData, cat.id)
-    navigate(`/catshow/${cat.id}`)
   }
 
   return (
